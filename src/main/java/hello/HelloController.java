@@ -11,4 +11,7 @@ public class HelloController {
         return "Greetings from Spring Boot!";
     }
 
+    @RequestMapping("/change")
+    public String change() { return "Making a Change for staging..."; }
+
 }
