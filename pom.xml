@@ -70,8 +70,8 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <serverId>nexus</serverId>
-                    <nexusUrl>http://172.18.0.3:8081/nexus/</nexusUrl>
+                    <serverId>nexus-snapshots</serverId>
+                    <nexusUrl>http://172.18.0.3:8081/</nexusUrl>
                     <skipStaging>true</skipStaging>
                 </configuration>
             </plugin>
@@ -88,11 +88,11 @@
     <distributionManagement>
         <snapshotRepository>
             <id>nexus-snapshots</id>
-            <url>http://172.18.0.03:8081/nexus/content/repositories/snapshots</url>
+            <url>http://172.18.0.03:8081/repository/fk-snapshots</url>
         </snapshotRepository>
         <repository>
             <id>nexus-releases</id>
-            <url>http://172.18.0.03:8081/nexus/content/repositories/releases</url>
+            <url>http://172.18.0.03:8081/repository/fk-releases</url>
         </repository>
     </distributionManagement>
 
@@ -104,7 +104,7 @@
                     <plugin>
                         <groupId>org.sonatype.plugins</groupId>
                         <artifactId>nexus-staging-maven-plugin</artifactId>
-                        <version>1.5.1</version>
+                        <version>1.6.6</version>
                         <executions>
                             <execution>
                                 <id>default-deploy</id>
